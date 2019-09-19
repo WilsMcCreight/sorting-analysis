@@ -1,19 +1,19 @@
 #include <iostream>
 #include "arr.h"
 #include "bubble_sort.h"
+#include "print_array.h"
 using namespace std;
 
 int main () {
 
-  Arr rand_arr = Arr(50, "random");
-  Arr asc_arr = Arr(50, "ascending");
-  Arr desc_arr = Arr(50, "descending");
+  Arr rand_arr = Arr(20, "random");
+  Arr asc_arr = Arr(20, "ascending");
+  Arr desc_arr = Arr(20, "descending");
   // Arr all_arr = (50, "all");
 
   // time_start
-  Arr temp;
-  // cout >> rand_arr.get_vec();
-  temp = bubble_sort(rand_arr);
+  Arr sorted_arr = bubble_sort(rand_arr);
+  print_array(sprted_arr);
   // time_end
   // time_start
   // bubble_sort(desc_arr);

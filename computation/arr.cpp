@@ -34,3 +34,7 @@ Arr::Arr(int vec_size, string mode) {
     v[i] = rand() % vec_size + 1;
   }
 }
+
+void Arr::set_vec(vector<int> new_vector) {
+  v = new_vector;
+}

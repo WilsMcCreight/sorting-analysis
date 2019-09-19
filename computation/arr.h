@@ -14,6 +14,7 @@ public:
   Arr(int vec_size, string mode);
 
   vector<int> get_vec() { return v; }
+  void set_vec(vector<int> new_vector);
 };
 
 #endif

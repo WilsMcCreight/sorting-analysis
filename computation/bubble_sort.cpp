@@ -8,9 +8,6 @@ Arr bubble_sort(Arr arr) {
   vector<int> vec = arr.get_vec();
   while(working) {
     working = false;
-    // if (print) {
-    //   print_array(arr, arr_size);
-    // }
     if (vec.size() > 1) {
       for(int i = 0; i < vec.size() - 1; i++) {
         if (vec[i] > vec[i+1]) {
@@ -22,8 +19,7 @@ Arr bubble_sort(Arr arr) {
       }
     }
   }
-  // if (print) {
-  //   print_array(arr, arr_size);
-  // }
-  return arr;
+  Arr sorted = Arr();
+  sorted.set_vec(vec);
+  return sorted;
 }
