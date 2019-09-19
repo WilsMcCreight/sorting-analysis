@@ -1,7 +1,7 @@
 #include <iostream>
-#include "arr.h"
-#include "bubble_sort.h"
-#include "print_array.h"
+#include "helpers/arr.h"
+#include "helpers/print_array.h"
+#include "algorithms/bubble_sort.h"
 using namespace std;
 
 int main () {
@@ -13,7 +13,7 @@ int main () {
 
   // time_start
   Arr sorted_arr = bubble_sort(rand_arr);
-  print_array(sprted_arr);
+  print_array(sorted_arr);
   // time_end
   // time_start
   // bubble_sort(desc_arr);
@@ -51,12 +51,6 @@ int main () {
   // time_start
   // quick_sort(rand_arr);
   // time_end
-
-
-  // cout << rand_arr.get_array();
-
-
-
 
   return 0;
 }

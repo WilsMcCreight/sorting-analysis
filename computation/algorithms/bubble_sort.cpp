@@ -1,6 +1,7 @@
 // #include <iostream>
 // using namespace std;
-#include "arr.h"
+#include "bubble_sort.h"
+#include "../helpers/arr.h"
 
 
 Arr bubble_sort(Arr arr) {
