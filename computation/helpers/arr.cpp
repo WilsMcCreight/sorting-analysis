@@ -1,6 +1,4 @@
 #include <iostream>
-// #include <string>
-// #include <stddef.h>
 #include "arr.h"
 using namespace std;
 
@@ -25,7 +23,8 @@ Arr::Arr(int vec_size) {
   }
 }
 
-Arr::Arr(int vec_size, string mode) {
+Arr::Arr(int vec_size, string gen_type) {
+  set_mode(gen_type);
   v.resize(vec_size);
 
   srand(time(NULL));
@@ -37,4 +36,8 @@ Arr::Arr(int vec_size, string mode) {
 
 void Arr::set_vec(vector<int> new_vector) {
   v = new_vector;
+}
+
+void Arr::set_mode(string gen_type) {
+  mode = gen_type;
 }
