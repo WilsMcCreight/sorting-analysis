@@ -14,8 +14,8 @@ CXXFLAGS = -Wall -g
 
 # The main.o target can be written more simply
 
-outputs/executables/main: computation/main.cpp computation/helpers/arr.h computation/helpers/print_array.h computation/algorithms/bubble_sort.h
-	$(CXX) $(CXXFLAGS) computation/main.cpp computation/helpers/arr.cpp computation/helpers/print_array.cpp computation/algorithms/bubble_sort.cpp -o outputs/executables/main
+outputs/executables/main.out: computation/main.cpp computation/helpers/arr.h computation/helpers/print_array.h computation/algorithms/bubble_sort.h
+	$(CXX) $(CXXFLAGS) computation/main.cpp computation/helpers/arr.cpp computation/helpers/print_array.cpp computation/algorithms/bubble_sort.cpp -o outputs/executables/main.out
 
 # data/executables/main.o: computation/main.cpp computation/helpers/arr.h computation/helpers/print_array.h computation/algorithms/bubble_sort.h
 # 	$(CXX) $(CXXFLAGS) computation/main.cpp -o data/executables/main.o

@@ -1,19 +1,32 @@
 #include <iostream>
+#include <ctime>
+#include <vector>
 #include "helpers/arr.h"
 #include "helpers/print_array.h"
 #include "algorithms/bubble_sort.h"
 using namespace std;
 
 int main () {
+  int num_arrays = 50;
+  int array_size = 100;
+  clock_t time_start;
 
-  Arr rand_arr = Arr(20, "random");
-  Arr asc_arr = Arr(20, "ascending");
-  Arr desc_arr = Arr(20, "descending");
-  // Arr all_arr = (50, "all");
+  vector<clock_t> bub_rand_times;
+  bub_rand_times.resize(num_arrays);
 
-  // time_start
-  Arr sorted_arr = bubble_sort(rand_arr);
-  print_array(sorted_arr);
+  for(int i = 0; i < num_arrays; i++) {
+    Arr rand_arr = Arr(array_size, "random");
+    // Arr asc_arr = Arr(array_size, "ascending");
+    // Arr desc_arr = Arr(array_size, "descending");
+
+    time_start = clock();
+    Arr sorted_arr = bubble_sort(rand_arr);
+    // print_array(sorted_arr);
+    bub_rand_times[i] = time_start - clock();
+    // bub_ran_time = time_start = clock();
+  }
+
+  // cout << bub_rand_times;
   // time_end
   // time_start
   // bubble_sort(desc_arr);
