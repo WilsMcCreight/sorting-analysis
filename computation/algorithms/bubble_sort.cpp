@@ -1,5 +1,3 @@
-// #include <iostream>
-// using namespace std;
 #include "bubble_sort.h"
 #include "../helpers/arr.h"
 
