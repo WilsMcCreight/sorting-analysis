@@ -4,7 +4,11 @@
 # Variables to control Makefile operation
 
 CXX = g++
-CXXFLAGS = -Wall -g
+CXXFLAGS = -Wall
+# CXXFLAGS = -Wall -g
+
+
+run = ./outputs/executables/main.out
 
 # ****************************************************
 # Targets needed to bring the executable up to date
