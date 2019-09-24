@@ -14,7 +14,7 @@ int main () {
   int array_size = 100;
   clock_t time_start;
   ofstream myfile;
-  myfile.open("bubble_sort_times.csv");
+  myfile.open("outputs/data/bubble_sort_times.csv");
   myfile << "Row, bub_rand_small, bub_rand_med, bub_rand_large, bub_asc_small, bub_asc_med, bub_asc_large, bub_desc_small, bub_desc_med, bub_desc_large\n";
 
 
@@ -41,6 +41,8 @@ int main () {
     time_start = clock();
     sorted_arr = selection_sort(rand_arr);
     sel_rand_times[i] = time_start - clock();
+
+    myfile.close();
   }
 
   // cout << bub_rand_times;
