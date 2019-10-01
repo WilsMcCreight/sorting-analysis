@@ -12,6 +12,7 @@ using namespace std;
 int main () {
   int num_arrays = 20;
   int array_size = 10;
+  int size_scaler = 10;
   clock_t time_start;
   ofstream myfile;
   myfile.open("outputs/data/bubble_sort_times.csv");
@@ -54,7 +55,7 @@ int main () {
     bub_desc_timesI[i] = time_start - clock();
   }
 
-  array_size = array_size * 10;
+  array_size = array_size * size_scaler;
 
   for(int i = 0; i < num_arrays; i++) {
     rand_arr = Arr(array_size, "random");
@@ -74,7 +75,7 @@ int main () {
     bub_desc_timesII[i] = time_start - clock();
   }
 
-  array_size = array_size * 10;
+  array_size = array_size * size_scaler;
 
   for(int i = 0; i < num_arrays; i++) {
     rand_arr = Arr(array_size, "random");
@@ -94,7 +95,7 @@ int main () {
     bub_desc_timesIII[i] = time_start - clock();
   }
 
-  array_size = array_size * 10;
+  array_size = array_size * size_scaler;
 
   for(int i = 0; i < num_arrays; i++) {
     rand_arr = Arr(array_size, "random");
@@ -113,7 +114,6 @@ int main () {
     sorted_arr = bubble_sort(desc_arr);
     bub_desc_timesIV[i] = time_start - clock();
   }
-
 
 
   for(int k = 0; k < num_arrays; k++) {
